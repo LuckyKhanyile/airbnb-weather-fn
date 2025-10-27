@@ -82,7 +82,7 @@ def get_synapse_connection():
 def load_coordinates_from_synapse():
     """Reads distinct GPS coordinates from Synapse silver.location view."""
     query = """
-    SELECT TOP 10 
+    SELECT
         gps_location_key,
         latitude_round AS latitude,
         longitude_round AS longitude
