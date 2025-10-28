@@ -2,11 +2,30 @@
 # Ref: aka.ms/functions-azure-monitor-python
 # azure-monitor-opentelemetry
 
+# Core Azure Functions runtime
 azure-functions
-pandas
-requests
-pyodbc
+
+# Azure SDKs
 azure-identity
-SQLAlchemy
 azure-storage-blob
+
+# Database connectivity
+pyodbc
+
+# Data handling and transformation
+pandas
+numpy
+
+# Machine Learning
+scikit-learn
+textblob
+
+# Optional for NLP dependency of TextBlob
+nltk
+
+# Parquet support
 pyarrow
+fastparquet
+
+# HTTP requests
+requests
