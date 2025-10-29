@@ -29,5 +29,5 @@ def RunPcaAnalysis(myTimer: func.TimerRequest):
     pca_df = pd.DataFrame(pcs, columns=[f"PC{i+1}" for i in range(5)])
     pca_df["listing_id"] = df["listing_id"].iloc[:len(pca_df)]
 
-    upload_to_blob(pca_df, container="airbnb-weather", prefix="pca")
+    upload_to_blob(pca_df, prefix="pca")
     logging.info("✅ PCA results uploaded successfully.")

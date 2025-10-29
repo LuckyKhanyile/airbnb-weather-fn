@@ -32,7 +32,7 @@ def get_synapse_connection():
     return pyodbc.connect(conn_str)
 
 
-def upload_to_blob(df: pd.DataFrame, container: str, prefix: str):
+def upload_to_blob(df: pd.DataFrame, prefix: str):
     """Uploads DataFrame to Azure Blob Storage as a Parquet file."""
     sas_url = os.environ["BLOB_SAS_URL"]  # container-level SAS URL
     container_client = ContainerClient.from_container_url(sas_url)
